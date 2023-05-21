@@ -1,8 +1,10 @@
+import { escape } from "../decorators/espacape.js";
 import { Negociacoes } from "../models/negociacoes.js";
 import { View } from "./view.js";
 
 export class NegocicacoesView extends View<Negociacoes>{
 
+    @escape
     protected template(model: Negociacoes): string{
         return `
             <table class="table table-hover table-bordered"> 
